@@ -24,6 +24,15 @@ $(document).ready(function(){
        // alert(info);
         sendToAttendance(info);
     });
+    $(document).on('click',"#feedsubmit",function(e){
+        e.preventDefault();
+        var regno=$("#regnoForFeedback").val();
+        var text=$("#text").val();
+        var info={regno:regno , text: text};
+        info =JSON.stringify(info);
+        //alert(info);
+        sendToFeedback(info);
+    });
 });
 var sendToRegister=function(info){
        $.ajax({
@@ -55,6 +64,32 @@ var sendToRegister=function(info){
 var sendToAttendance=function(info){
     $.ajax({
        url:"attendance.php",
+       type:"post",
+       data:info,
+       async:true,
+       success:function(response){
+           // alert(response);
+            jsondata=$.parseJSON(response); //to json object
+                if(jsondata.error){
+                   alert(jsondata.error)
+                }else if(jsondata.msg){
+                alert(jsondata.msg) //showing using . operator 
+                //we can also use it as associative array jsondata['name']
+                }
+       },
+       error:function(response,status,errorThrown){
+            console.log(response.status);
+            alert(response);
+            alert(errorThrown);
+       },
+       cache:false,
+       contentType:false,
+       processData:false
+    });
+};
+var sendToFeedback=function(info){
+    $.ajax({
+       url:"feedback.php",
        type:"post",
        data:info,
        async:true,
