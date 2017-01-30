@@ -1,20 +1,220 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>Softwares</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>
-            Oracle Virtual Box For windows :&nbsp;<a href="linux.pdf">click here</a>
-            Ubuntu 16.04 amd64.iso <a href="linux.pdf">click here</a>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Python Workshop</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="css/grayscale.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i> <span class="light">Pyhton</span> Workshop
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#registeration">Register</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#registeration">Attendance</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#download">Download</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-        
-    </body>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">Python</h1>
+                        <p class="intro-text">Python is the "most powerful language you can still read". 
+                            <br>- Paul Dubois.</p>
+                        <a href="#registeration" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Register Section -->
+    <section id="registeration" class="container content-section text-center">
+        <div class="row ">
+            <!-- registration div-->
+            <div class="col-lg-6">
+                <h2>Register</h2>
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="regno" class="col-md-3 control-label">Registration No : </label>
+                        <div class="col-md-6">
+                                 <input type="text" class="form-control" id="regno" placeholder="University Reg no."/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-md-3 control-label">Name : </label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="name" placeholder="Name"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="course" class="col-md-3 control-label">Course : </label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="course" placeholder="BSc/MSc/MCA/BTech"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="semester" class="col-md-3 control-label">Semester : </label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="semester" placeholder="1/2/3/4/5/6/7/8"/>
+                        </div>
+                    </div>
+                     <div class="form-group">
+                        <label for="email" class="col-md-3 control-label">Email : </label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="email" placeholder="abc@xyz.pqr"/>
+                        </div>
+                    </div>
+                     <div class="form-group">
+                        <label for="mobile" class="col-md-3 control-label">Mobile No : </label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="mobile" placeholder="9876543210"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-7 col-lg-offset-4">
+                            <a href="" id="register" class="btn btn-default btn-lg">Submit</a> &nbsp;
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!--end registration div-->
+            <div class="col-lg-6">
+                <h2>Attendance</h2>
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="regnoForAttendance" class="col-md-3 control-label">Registration No : </label>
+                        <div class="col-md-6">
+                                 <input type="text" class="form-control" id="regnoForAttendance" placeholder="University Reg no."/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-7 col-lg-offset-4">
+                            <a href="" id="submit" class="btn btn-default btn-lg">Submit</a> &nbsp;
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+     
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Download</h2>
+                    
+                    <a href="VirtualBox-5.1.14-112924-Win.exe" class="btn btn-default btn-lg">Oracle Virtual Box</a> &nbsp;
+                    <a href="ubuntu-16.04.1-desktop-amd64.iso" class="btn btn-default btn-lg">Ubuntu 16.04 amd64 iso</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact Us</h2>
+             <!--   <p>Feel free to email us to provide some feedback.</p>
+                <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
+                </p> -->
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section 
+    <div id="map"></div>
+    -->
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy;  2017</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ 
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+-->
+    <!-- Theme JavaScript -->
+    <script src="js/grayscale.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
 </html>

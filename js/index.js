@@ -7,9 +7,11 @@ $(document).ready(function(){
         var name= $("#name").val();
         var course= $("#course").val();
         var semester= $("#semester").val();
-        var info={regno : regno , name: name , course:course , semester:semester}; //forming json string 
+        var email= $("#email").val();
+        var mobile= $("#mobile").val();
+        var info={regno : regno , name: name , course:course , semester:semester , email:email , mobile:mobile}; //forming json string 
         info =JSON.stringify(info); //in php7.0 its necessary earlier it wasn't needed
-        alert(info);
+       // alert(info);
         sendToRegister(info);
     });
     
@@ -19,7 +21,7 @@ $(document).ready(function(){
         var regno=$("#regnoForAttendance").val();
         var info={regno:regno};
         info =JSON.stringify(info);
-        alert(info);
+       // alert(info);
         sendToAttendance(info);
     });
 });
@@ -30,13 +32,12 @@ var sendToRegister=function(info){
         data:info,
         async: true,  //make it false if you send data to php and reload page else keep i true
         success: function (response) {
-		alert(response);   //result from server or php file if successjsondata=$.parseJSON(response); //to json object
+		//alert(response);   //result from server or php file if successjsondata=$.parseJSON(response); //to json object
                 jsondata=$.parseJSON(response); //to json object
                 if(jsondata.error){
-                   alert(json.error)
+                   alert(jsondata.error)
                 }else if(jsondata.msg){
                 alert(jsondata.msg) //showing using . operator 
-               
                 //we can also use it as associative array jsondata['name']
                 }
         },
@@ -58,10 +59,10 @@ var sendToAttendance=function(info){
        data:info,
        async:true,
        success:function(response){
-            alert(response);
+           // alert(response);
             jsondata=$.parseJSON(response); //to json object
                 if(jsondata.error){
-                   alert(json.error)
+                   alert(jsondata.error)
                 }else if(jsondata.msg){
                 alert(jsondata.msg) //showing using . operator 
                 //we can also use it as associative array jsondata['name']

@@ -32,10 +32,10 @@ class attendance {
 }
 $Obj=new attendance();
 $json = json_decode(file_get_contents("php://input"));
-if(!is_null($json->regno)){
+if(!empty($json->regno)){
     $Obj->setRegno($json->regno);
     $Obj->takeAttendance();
     echo json_encode($Obj->successMessage());
 }else {
-    echo json_encode(array("error"=>"name not set"));
+    echo json_encode(array("error"=>"Registration no. not filled"));
 }

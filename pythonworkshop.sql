@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `workshop` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `workshop`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Linux (x86_64)
 --
 -- Host: localhost    Database: workshop
@@ -27,7 +29,7 @@ CREATE TABLE `attendance` (
   `regno` char(10) DEFAULT NULL,
   `dateNtime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,6 +45,8 @@ CREATE TABLE `registration` (
   `name` varchar(255) DEFAULT NULL,
   `course` char(3) DEFAULT NULL,
   `semester` int(11) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `mobile` char(12) DEFAULT NULL,
   `dateNtime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -57,4 +61,4 @@ CREATE TABLE `registration` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-01-29 12:01:09
+-- Dump completed on 2017-01-30 19:48:59
