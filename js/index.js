@@ -42,13 +42,15 @@ var sendToRegister=function(info){
         async: true,  //make it false if you send data to php and reload page else keep i true
         success: function (response) {
 		//alert(response);   //result from server or php file if successjsondata=$.parseJSON(response); //to json object
-                jsondata=$.parseJSON(response); //to json object
+               jsondata=$.parseJSON(response); //to json object
                 if(jsondata.error){
                    alert(jsondata.error)
                 }else if(jsondata.msg){
                 alert(jsondata.msg) //showing using . operator 
                 //we can also use it as associative array jsondata['name']
+               
                 }
+                
         },
         error: function (response, status, errorThrown) {
             console.log(response.status);

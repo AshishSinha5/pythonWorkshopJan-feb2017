@@ -19,11 +19,11 @@ class register {
         $this->rowCount= $this->databaseObj->getResultantRow();
     }
     public function successMessage(){
-        if ($this-> rowCount > 0){
+        if ($this->rowCount['result'] > 0){
            return array("msg"=>"Registration complete");
         }
         else {
-            return array("msg"=>"some error occured");
+            return array("msg"=>"Already Registered.");
         }
     }
 }
